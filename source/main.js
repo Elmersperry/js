@@ -76,7 +76,7 @@ alert("Результат выполнения функции: " + y);
 }
 }
 */
-
+/*
 function calc(a, b, operation) {
   if (operation == "+") {
     return a + b;
@@ -94,8 +94,8 @@ function calc(a, b, operation) {
     return "Неизвестная операция. Попробуйте ещё раз";
   }
 }
-
-
+*/
+/*
 function calcPaS() {
   let x = Number(document.getElementsByName("num1")[0].value);
   let y = Number(document.getElementsByName("num2")[0].value);
@@ -109,7 +109,7 @@ window.onload = () => {
   let buttonCalc = document.getElementById("calculator");
   buttonCalc.addEventListener("click", calcPaS);
 };
-
+*/
 /*
   let x = Number(prompt("Введите первое число"));
   let y = Number(prompt("Введите второе число"));
@@ -119,3 +119,68 @@ window.onload = () => {
 };
 */
 
+/*let user = new Object();*/
+/*
+let user = {
+  name: "Rodion",
+  surname: "Valiullin";
+  age: 25,
+  city: "Saint-P",
+};
+
+console.log(user.name);
+console.log(user["age"]);
+
+user.isAdmin = true;
+delete user.age;
+
+console.log(user);
+*/
+/*
+let fruit = prompt("Введите свой любимый фрукт:");
+
+let waifu = {
+  face: "UWU",
+  booba: "BEEG",
+  bunda: "GYAAAAAAAAAAAAAAATTTT",
+  real: false,
+  [fruit]: "favorite",
+};
+
+console.log(waifu.face);
+console.log(waifu["bunda"]);
+waifu.OWO = true;
+console.log(waifu);
+*/
+
+let rectangle = {
+  a: null,
+  b: null,
+  c: null,
+  d: null,
+};
+
+function set_rectangle(o) {
+  A = prompt("Введите координаты первой точки (через запятую):");
+  o.A = A;
+  B = prompt("Введите координаты второй точки (через запятую):");
+  o.B = B;
+  C = prompt("Введите координаты третьей точки (через запятую):");
+  o.C = C;
+  D = prompt("Введите координаты четвёртой точки (через запятую):");
+  o.D = D;
+}
+
+function rectangleInfo(o) {
+  alert(
+    `Точка A: (${o.A})\nТочка B: (${o.B})\nТочка C: (${o.C})\nТочка D: (${o.D})`
+  );
+}
+
+function width(o) {
+  alert(`Ширина прямоугольника: ${Number(o.C[0]) - Number(o.D[0])}`);
+}
+
+function height(o) {
+  alert(`Высота прямоугольника: ${Number(o.A[2]) - Number(o.D[2])}`);
+}
