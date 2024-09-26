@@ -184,3 +184,50 @@ function width(o) {
 function height(o) {
   alert(`Высота прямоугольника: ${Number(o.A[2]) - Number(o.D[2])}`);
 }
+/*
+$(document).ready(function () {
+  $("button").click(function () {
+    $("p").toggle();
+  });
+});
+*/
+/*
+$(document).ready(function () {
+  /*$("p").text("Текст, установленный из JQuery");*/
+//$("p").html("<h3>Текст, установленный из JQuery</h3>");
+//$("p").attr("style", "font-size: 24px;");
+/*
+  $("p").append("Hello") - добавление значения в конец тега
+  $("p").prepend("Oh, man, Jesus Christ...") - добавление значения в начало тега
+  $("p").after("div");
+  $("p").before("div");
+  */
+/*
+  $("p").remove() - удаление дочернего элемента (или указанного в методе)
+  $("p").empty() - удаление всех дочерних элементов
+  */
+//});
+
+/*$(document).ready(function () {
+  $("#callAjax").click(function () {
+    $("#ajaxContent").load("../text.txt");
+  });
+});
+*/
+
+$(document).ready(function () {
+  $.ajax({
+    url: "https://jsonplaceholder.typicode.com/todos/1",
+    type: "GET",
+
+    success: function (data) {
+      for (key in data) {
+        $("#ajaxContent").append(key + ":" + data[key] + "<br>");
+      }
+    },
+
+    error: function (error) {
+      $("#ajaxContent").text(error);
+    },
+  });
+});
